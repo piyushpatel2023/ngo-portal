@@ -1,5 +1,0 @@
-<IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "https://55i53iuqk9.execute-api.ap-south-1.amazonaws.com/prod/orders"
-    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
-    Header set Access-Control-Allow-Headers "Content-Type"
-</IfModule>
