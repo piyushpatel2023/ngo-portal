@@ -487,7 +487,7 @@
         "https://55i53iuqk9.execute-api.ap-south-1.amazonaws.com/prod/orders";
 
     // Defining async function
-    async function getapi(url) {
+    function getapi(url) {
 
         // Storing response
         // const response = await fetch(url);
@@ -502,7 +502,7 @@
             const headers = {'Content-Type':'application/json',
                     'Access-Control-Allow-Origin':'*',
                     'Access-Control-Allow-Methods':'GET,POST,PATCH,OPTIONS'}
-            const response = await fetch(url, {
+            const response = fetch('https://55i53iuqk9.execute-api.ap-south-1.amazonaws.com/prod/orders/', {
                 ethod: 'GET',
                 statusCode: 200,
                 headers:headers,
@@ -511,7 +511,7 @@
             throw new Error(`Error! status: ${response.status}`);
             }
 
-            const result = await response.json();
+            const result = response.json();
             show(result);
         } catch (err) {
             console.log(err);
