@@ -499,15 +499,14 @@
         //     hideloader();
         // }
         try {
+            const headers = {'Content-Type':'application/json',
+                    'Access-Control-Allow-Origin':'*',
+                    'Access-Control-Allow-Methods':'GET,POST,PATCH,OPTIONS'}
             const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    accept: 'application/json',
-                },
+                ethod: 'GET',
+                statusCode: 200,
+                headers:headers,
             });
-            response.setHeader("Access-Control-Allow-Origin", "https://55i53iuqk9.execute-api.ap-south-1.amazonaws.com/prod/orders");
-            response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
-            response.setHeader("Access-Control-Allow-Headers", "Content-Type");
             if (!response.ok) {
             throw new Error(`Error! status: ${response.status}`);
             }
