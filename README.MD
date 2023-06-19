@@ -1,3 +1,5 @@
+This project was bootstrapped with HTML and Javascript
+
 # Setup
 
 Clone the repository
