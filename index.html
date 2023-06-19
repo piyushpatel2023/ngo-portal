@@ -161,7 +161,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Leftover food data</h4>
+                                <h4 class="mb-sm-0">Leftover food data order data</h4>
 
                                 
 
@@ -183,8 +183,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body border border-dashed border-end-0 border-start-0">
-                                    <form>
+                                <div class="card-body border border-dashed border-end-0 border-start-0"  style="display:none">
+                                    <form >
                                         <div class="row g-3">
                                             <div class="col-xxl-5 col-sm-6">
                                                 <div class="search-box">
@@ -247,22 +247,22 @@
                                                     <i class="ri-store-2-fill me-1 align-bottom"></i> All Orders
                                                 </a>
                                             </li>
-                                            <li class="nav-item">
+                                            <li class="nav-item"  style="display:none">
                                                 <a class="nav-link py-3 Delivered" data-bs-toggle="tab" id="Delivered" href="#delivered" role="tab" aria-selected="false">
                                                     <i class="ri-checkbox-circle-line me-1 align-bottom"></i> Delivered
                                                 </a>
                                             </li>
-                                            <li class="nav-item">
+                                            <li class="nav-item" style="display:none">
                                                 <a class="nav-link py-3 Pickups" data-bs-toggle="tab" id="Pickups" href="#pickups" role="tab" aria-selected="false">
                                                     <i class="ri-truck-line me-1 align-bottom"></i> Pickups 
                                                 </a>
                                             </li>
-                                            <li class="nav-item">
+                                            <li class="nav-item" style="display:none">
                                                 <a class="nav-link py-3 Returns" data-bs-toggle="tab" id="Returns" href="#returns" role="tab" aria-selected="false">
                                                     <i class="ri-arrow-left-right-fill me-1 align-bottom"></i> Returns
                                                 </a>
                                             </li>
-                                            <li class="nav-item">
+                                            <li class="nav-item" style="display:none">
                                                 <a class="nav-link py-3 Cancelled" data-bs-toggle="tab" id="Cancelled" href="#cancelled" role="tab" aria-selected="false">
                                                     <i class="ri-close-circle-line me-1 align-bottom"></i> Cancelled
                                                 </a>
@@ -483,7 +483,7 @@
                             <i class="ri-pencil-fill fs-16"></i>
                         </a>
                     </li>
-                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Remove">
+                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Remove" style="display:none">
                         <a class="text-danger d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteOrder">
                             <i class="ri-delete-bin-5-fill fs-16"></i>
                         </a>

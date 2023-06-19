@@ -24,7 +24,7 @@ we have used HTML and Javascript for frontend.
 
 Hosting
 
-we are using Github for the frontend hosting.
+we are using vercel for the frontend hosting.
 
 Backend and database
 
