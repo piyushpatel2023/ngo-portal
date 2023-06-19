@@ -18,7 +18,7 @@ Set git hooks
 
     cp git-hooks/pre-commit .git/hooks/pre-commit
 
-#Frontend
+# Frontend
 
 we have used HTML and Javascript for frontend.
 
