@@ -1,11 +1,9 @@
 jQuery(document).ready(function($){
-            
-    $('select.orders_change').on('change',function(e) {
-        alert('asdf');
-        var status = $("option:selected", this);
+    $(document).on("change", "select.orders_change", function(){   
+        
+        var status = $(this).val();
         var orderid = $(this).data('id');
-        console.log('570'+status);
-        console.log('571'+orderid);
+        
         const apiUrl = 'https://55i53iuqk9.execute-api.ap-south-1.amazonaws.com/prod/orders'; // Replace with your API endpoint
 
         const updatedData = {

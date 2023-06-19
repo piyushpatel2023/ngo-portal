@@ -474,7 +474,7 @@
             <td>
                 <ul class="list-inline hstack gap-2 mb-0">
                     <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                        <a href="apps-ecommerce-order-details.html" class="text-primary d-inline-block">
+                        <a href="#showModalview${i}" data-bs-toggle="modal" class="text-primary d-inline-block edit-item-btn">
                             <i class="ri-eye-fill fs-16"></i>
                         </a>
                     </li>
@@ -533,8 +533,47 @@
                             <div class="modal-footer">
                                 <div class="hstack gap-2 justify-content-end">
                                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-success" id="add-btn">Update Status</button>
-                                    <!-- <button type="button" class="btn btn-success" id="edit-btn">Update</button> -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div><div class="modal fade" id="showModalview${i}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-light p-3">
+                            <h5 class="modal-title" id="exampleModalLabel">&nbsp;</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                        </div>
+                        <form class="tablelist-form" autocomplete="off">
+                            <div class="modal-body">
+                                <input type="hidden" id="id-field" />
+
+                                <div class="mb-3" id="modal-id">
+                                    <label for="orderId" class="form-label">ID</label>
+                                    <input type="text" id="orderId" class="form-control" value="${listData.OrderId}" readonly />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="customername-field" class="form-label">Customer Name</label>
+                                    <input type="text" id="customername-field" class="form-control" value="${listData.CustomerName}" readonly />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="date-field" class="form-label">Order Date</label>
+                                    <input type="text" id="date-field" class="form-control" value="${listData.Timestamp}" readonly/>
+                                </div>
+
+                                <div>
+                                    <label for="delivered-status" class="form-label">Delivery Status</label>
+                                    <select class="form-control orders_change" name="delivered-status" disabled="disabled" id="delivered-status${i}" data-id="${listData.OrderId}">
+                                        <option value="" >Delivery Status</option>
+                                        <option value="pending" ${listData.Status == "pending"?"Selected":""}>Pending</option>
+                                        <option value="Cancelled"${listData.Status == "cancelled"?"Selected":""}>Cancelled</option>
+                                        <option value="in transit"${listData.Status == "in transit"?"Selected":""}>in transit</option>
+                                        <option value="delivered"${listData.Status == "delivered"?"Selected":""}>Delivered</option>
+                                        <option value="returns"${listData.Status == "returns"?"Selected":""}>Returns</option>
+                                    </select>
                                 </div>
                             </div>
                         </form>
